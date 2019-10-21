@@ -9,12 +9,14 @@ def find():
   while time() - start < 60:
     a = randint(-200,200)
     b = randint(-200,200)
+    c = randint(-200,200)
 
-    rancombo = [a,b]
-
+    rancombo = [a,b,c]
     rancombo.sort()
 
-    if a**2 + b**2 == 10**2 and rancombo not in workingcombos:
+    equation = a**3 + b**3 +c**3 == 2
+
+    if equation and rancombo not in workingcombos:
       workingcombos.append(rancombo)
       print(rancombo, len(workingcombos))
 
